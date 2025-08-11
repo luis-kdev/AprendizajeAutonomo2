@@ -39,11 +39,11 @@ git clone
 Navega al directorio del proyecto:
 
 bash
-cd ahorcado-python
+cd AprendizajeAutonomo2
 Ejecuta el juego:
 
 bash
-python ahorcado.py
+python Autonomo2ProgramaElAhorcado.py
 🎯 Características del juego
 ✅ Interfaz limpia en consola
 ✅ Dibujo ASCII progresivo del ahorcado
