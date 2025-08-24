@@ -1,5 +1,6 @@
 # AprendizajeAutonomo2
-Este repositorio contiene el desarrollo del clásico Juego del Ahorcado, implementado como parte del proyecto de Aprendizaje Autónomo 2. El objetivo es aplicar conceptos de programación, manejo de estructuras de datos y lógica para crear una versión funcional e interactiva del juego.
+Este repositorio contiene el desarrollo del clásico Juego del Ahorcado, implementado como parte del proyecto de Aprendizaje Autónomo 2. 
+El objetivo es aplicar conceptos de programación, manejo de estructuras de datos y lógica para crear una versión funcional e interactiva del juego.
 🎮 ¿Qué es este juego?
 Este es una implementación clásica del Juego del Ahorcado ejecutándose en la terminal/consola. El objetivo es adivinar una palabra oculta letra por letra antes de que se complete el dibujo del ahorcado.
 
@@ -23,13 +24,27 @@ ahorcado-python/
 Lenguaje de programación: Python exclusivamente
 Versión de Python: 3.11.12
 
-📚 Librerías utilizadas
-Este proyecto utiliza las siguientes librerías estándar de Python (no requieren instalación adicional):
+🛠 Funcionalidades principales
+- Interfaz tipo *ventana TUI* con bordes Unicode (╔═╗╚═╝) y fallback ASCII (+-|).  
+- Colores ANSI (verde para aciertos, rojo para errores, amarillo para palabra oculta).  
+- Selección de *categoría* y *dificultad*.  
+- Opción de adivinar *letras* o la *palabra completa*.  
+- Registro de *palabras fallidas* y conteo en intentos.  
+- *Modo automático* (AUTO_MODE=1) para demos o cuando no hay entrada de teclado.  
+- Validación robusta: solo letras, evita repetidas, manejo de errores amigable.  
+- *18 pruebas automáticas* que garantizan la lógica del juego.  
 
-Librería	Versión	     Descripción
-random	  Integrada	   Para selección aleatoria de palabras
-Librería	Versión	     Descripción
-os	      Integrada	   Para limpiar la pantalla de la consola
+📂 Estructura del código
+- HangmanGame (dataclass): reglas del juego y estado.  
+- *Estructuras de datos:*
+  - Tuplas → HANGMAN_PICS, BANNER, LETTER_ORDER.  
+  - Listas → alfabeto pintado, columnas en la interfaz.  
+  - Diccionarios → WORD_BANK, DIFFICULTY, FG (colores).  
+- Funciones principales:  
+  - jugar_consola(categoria=None, dificultad="media")  
+  - seleccionar_opcion(titulo, opciones)  
+  - intento(letra), intento_palabra(candidata)  
+  - make_box(lines, title)  
 
 🚀 Cómo iniciar el juego
 Clona el repositorio (o descarga el archivo):
